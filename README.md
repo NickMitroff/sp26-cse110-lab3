@@ -1,2 +1,2 @@
 # Lab 2 - Starter
-https://nickmitroff.github.io/mitroff-cse110-lab2/
+https://nickmitroff.github.io/sp26-cse110-lab3/
