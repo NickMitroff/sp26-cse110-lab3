@@ -6,9 +6,38 @@
     <meta name="CSE110 Meeting"
       content="In this meeting, we discussed the physiological effects of cortisol, and the benefits of lowering one's cortisol levels" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+      body {
+        --main-bg-color: rgb(176, 223, 232);
+        background-color: var(--main-bg-color, color(srgb 1 0.9 0.9));
+      }
+
+      @media (hover: hover) {
+        .box:hover {
+          background-color: white;
+          transition-duration: 0.4s;
+        }
+
+        .box2:hover {
+          background-color: white;
+          transition-duration: 0.4s;
+        }
+      }
+
+      * {
+        font-family: "Major Mono Display", monospace;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
   </head>
 
   <body>
+
+    <header class="header-text">
+      <h1>April 8th - Cortisol</h1>
+    </header>
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
@@ -16,9 +45,6 @@
         <li><a href="#">About</a></li>
       </ul>
     </nav>
-    <header>
-      <h1>April 8th - Cortisol</h1>
-    </header>
     <hr>
     <details>
       <summary>Meeting overview</summary>
@@ -27,65 +53,82 @@
       Start time: 12:31 pm <br>
       End time: 3:21 pm
     </details>
-      <h2>Introduction</h2>
-      <p>From <a href="https://my.clevelandclinic.org/health/articles/22187-cortisol">Cleveland Clinic</a>:
-        "<b>Cortisol</b> is
-        a
-        steroid <strong>hormone</strong> that your adrenal glands (the glands on top of your
-        kidneys) make. Cortisol affects several aspects of your health and helps regulate your body’s response to
-        stress.
-        High or low levels of cortisol can impact your health." <br>
-      </p>
-      <main>High cortisol levels can cause stress. Other symptoms include:
-        <ul>
-          <li>high blood pressure</li>
-          <li>weight gain</li>
-          <li>muscle weakness</li>
-        </ul>
-      </main>
-      <p>
-      However, extremely <i>low</i> cortisol levels are also dangerous, so having a good, stable cortisol level is
-      important.
-      </p>
+
+    <div>
+      <div class="box">
+        <h2>Introduction</h2>
+        <p>From <a href="https://my.clevelandclinic.org/health/articles/22187-cortisol">Cleveland Clinic</a>:
+          "<b>Cortisol</b> is
+          a
+          steroid <strong>hormone</strong> that your adrenal glands (the glands on top of your
+          kidneys) make. Cortisol affects several aspects of your health and helps regulate your body’s response to
+          stress.
+          High or low levels of cortisol can impact your health." <br>
+        </p>
+        <main>High cortisol levels can cause stress. Other symptoms include:
+          <ul>
+            <li>high blood pressure</li>
+            <li>weight gain</li>
+            <li>muscle weakness</li>
+          </ul>
+        </main>
+        <p>
+          However, extremely <i>low</i> cortisol levels are also dangerous, so having a good, stable cortisol level is
+          important.
+        </p>
+      </div>
 
 
-    <section>
-      <div><span></span></div>
-      <h3>How do I lower my cortisol?</h3>
-      <p>Lowering your cortisol level is <em>easy</em>, and the recommended methods are often good health advice in
-        general:</p>
-      <ol>
-        <li>get a good night's sleep</li>
-        <li>stay physically active</li>
-        <li>practice breathing exercises</li>
-        <li>do activities you enjoy</li>
-        <li>have healthy relationships</li>
-      </ol>
 
-    </section>
+      <div class="box2">
+        <section>
+          <div><span></span></div>
+          <h3>How do I lower my cortisol?</h3>
+          <p>Lowering your cortisol level is <em>easy</em>, and the recommended methods are often good health advice in
+            general:</p>
+          <ol>
+            <li>get a good night's sleep</li>
+            <li>stay physically active</li>
+            <li>practice breathing exercises</li>
+            <li>do activities you enjoy</li>
+            <li>have healthy relationships</li>
+          </ol>
+
+        </section>
+      </div>
+    </div>
+
+
 
     <hr>
     <h2>Gallery</h2>
-    <video controls width="250">
-      <source src="video.mp4" type="video/mp4" />
-    </video>
-    <br>
-    <audio controls src="video.mp4"></audio>
-    <br>
-    <img
-      src="https://preview.redd.it/can-someone-explain-the-low-cortisol-it-just-suddenly-v0-6mj3vl7gu0sg1.jpeg?auto=webp&s=ba5b0382fb3e27d1a73d8c7f96fde01a9c6b0072"
-      alt="Meme showing a dial with the label 'CORTISOL LEVEL', and an arrow indicating low cortisol.">
+    <div class="gallery-container">
+      <video controls class="gallery-item">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <audio controls src="video.mp4" class="gallery-item" style="border-radius: 200px;">Audio playback for
+        video</audio>
+      <img
+        src="https://preview.redd.it/can-someone-explain-the-low-cortisol-it-just-suddenly-v0-6mj3vl7gu0sg1.jpeg?auto=webp&s=ba5b0382fb3e27d1a73d8c7f96fde01a9c6b0072"
+        alt="Meme showing a dial with the label 'CORTISOL LEVEL', and an arrow indicating low cortisol."
+        class="gallery-item">
+    </div>
+
 
     <hr>
     <h2>Cortisol Survey</h2>
-    <form>
-      <fieldset>
+    <form class="survey-container">
+      <div class="survey-item">
         <label>Enter your name: </label>
         <input type="text" />
-        <br>
+      </div>
+
+      <div class="survey-item">
         <label>Do you have high cortisol levels? </label>
         <input type="checkbox" />
-        <br>
+      </div>
+
+      <div class="survey-item">
         <label>If so, which symptom of high cortisol levels are you most affected by?</label>
         <input type="text" list="cortisol-symptoms" />
         <datalist id="cortisol-symptoms">
@@ -93,14 +136,22 @@
           <option value="Weight gain"></option>
           <option value="Muscular weakness"></option>
         </datalist>
-        <br>
+      </div>
+
+      <div class="survey-item">
         <label>Which of these methods for lowering cortisol do you think is most important?</label>
         <br><input type="radio" name="cortisol" /> Getting good sleep
         <br><input type="radio" name="cortisol" /> Phsyical exercise
         <br><input type="radio" name="cortisol" /> Having healthy relationships
-        <br>
+      </div>
+
+
+      <div class="survey-item">
         <label>When is your birthday?</label> <input type="date" />
-        <br>
+      </div>
+
+
+      <div class="survey-item">
         <label>Have you taken CSE110?</label>
         <select>
           <option value="">(no response)</option>
@@ -110,9 +161,12 @@
           <option value="yes1">Yes, I'm taking it right now</option>
           <option value="yes2">Yes, I've taken it before</option>
         </select>
-        <br>
+      </div>
+
+
+      <div class="survey-item">
         <button formenctype="text/plain">Submit responses</button>
-      </fieldset>
+      </div>
 
 
     </form>

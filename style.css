@@ -1,0 +1,82 @@
+.box {
+    width: 350px;
+    height: 100%;
+    margin: 10px 5px 5px 10px;
+    padding: 2%;
+    border: 5px solid black;
+    display: block;
+}
+
+.box2 {
+    width: 350px;
+    height: 100%;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    padding-top: 2%;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 2%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 300px);
+    gap: 15px;
+}
+
+.gallery-item {
+    display: grid;
+    margin: auto;
+    max-width: 300px;
+    max-height: 300px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 15px;
+    background-color: var(--main-bg-color);
+}
+
+.header-text {
+    position: sticky;
+    top: 0%;
+    width: 100%;
+    color: #354670;
+    text-decoration: wavy underline #354670;
+    background-color: var(--main-bg-color, srgb 1 0.9 0.9 1); /* turns pink in fallback case*/
+    text-align: center;
+}
+
+.survey-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    display: flex;
+}
+
+.survey-item {
+    display: flex;
+    background-color: color-mix(in oklab, green 10%, hsl(217, 100%, 96%) 90%);
+    padding: 10px;
+    margin: 10px;
+    flex-grow: 1;
+}
+
+.survey-item:hover {
+    background-color: hsl(219, 100%, 86%);
+}
+
+
+.survey-item:active {
+    background-color: hsl(219, 100%, 81%);
+}
