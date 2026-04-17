@@ -124,6 +124,6 @@ div.gallery-container {
     background-color: rgb(92, 195, 233);
 }
 
-.survey-item:has(input) {
-    border-color: 2px solid aqua;
+.survey-item:has(input, label) {
+    border: 2px solid aqua;
 }
