@@ -30,6 +30,8 @@
     grid-template-columns:
         repeat(3, 300px);
     gap: 15px;
+    width: 100%;
+
 }
 
 .gallery-item {
@@ -50,7 +52,8 @@
     width: 100%;
     color: #354670;
     text-decoration: wavy underline #354670;
-    background-color: var(--main-bg-color, srgb 1 0.9 0.9 1); /* turns pink in fallback case*/
+    background-color: var(--main-bg-color, srgb 1 0.9 0.9 1);
+    /* turns pink in fallback case*/
     text-align: center;
 }
 
@@ -70,6 +73,10 @@
     padding: 10px;
     margin: 10px;
     flex-grow: 1;
+
+    & input, select {
+        margin-left: 24px;
+    }
 }
 
 .survey-item:hover {
@@ -79,4 +86,44 @@
 
 .survey-item:active {
     background-color: hsl(219, 100%, 81%);
+}
+
+#submit {
+    background-color: rgb(132, 255, 206);
+}
+
+div[class="box"],
+div[class="box2"] {
+    box-shadow: 5px 5px 5px black;
+}
+
+.survey-item:hover {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.box>* {
+    color: rgb(8, 60, 72);
+}
+
+.box2 * {
+    color: rgb(8, 72, 62);
+}
+
+hr+* {
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    min-width: 10%;
+    max-width: 20%;
+}
+
+form~* {
+    background-color: white;
+}
+
+
+div.gallery-container {
+    background-color: rgb(92, 195, 233);
+}
+
+.survey-item:has(input) {
+    border-color: 2px solid aqua;
 }
